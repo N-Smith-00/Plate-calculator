@@ -1,0 +1,81 @@
+*{
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(8, 4, 32);
+}
+
+button{
+    color: black;
+}
+
+input{
+    color: black;
+}
+
+.header-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color:rgb(98, 98, 98);
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.header-wrapper h1{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.barbell-selector-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.barbell-selector:active{
+    background-color: rgb(156, 124, 18);
+}
