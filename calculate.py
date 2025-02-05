@@ -1,3 +1,4 @@
+# plate options are set on or off (will be used more in profiles later)
 plate_options = {
     55:False,
     45:True,
