@@ -3,6 +3,7 @@
     <head>
         <title>Plate Calculator</title>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+        <script src="{{ url_for('static',filename='scripts/barButtons.js') }}"></script>
     </head>
 
     <body>
@@ -15,22 +16,21 @@
         <div class="main-wrapper">
             <div class="input-wrapper">
                 <div class="weight-input">
-                    <label for="weight">Total Weight (bar+plates):</label>
+                    <label for="weight">Total Weight (bar+plates)</label>
                     <input type="number" id="weight" name="weight" min="0">
                 </div>
 
                 <div class="barbell-selector-wrapper">
                     <label for="barbell">Barbell Weight</label>
-                    <div>
+                    <div class="bar-button-wrapper" id="bar-buttons">
                         <!--TODO: set button active when clicked-->
-                        <button class="barbell-selector" data-barbell="55" onclick="">55 lbs</button>
+                        <button class="barbell-selector" data-barbell="55">55 lbs</button>
                         <button class="barbell-selector" data-barbell="45">45 lbs</button>
                         <button class="barbell-selector" data-barbell="25">25 lbs</button>
                         <button class="barbell-selector" data-barbell="15">15 lbs</button>
                     </div>
                 </div>    
             </div>
-
         </div>
     </body>
 </html>
