@@ -55,15 +55,30 @@ input{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+    width: 50%;
 }
 
-.barbell-selector-wrapper{
+.input-wrapper label{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.weight-input{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+}
+
+.weight-input input{
+    width: 25%;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 input::-webkit-inner-spin-button,
@@ -74,8 +89,35 @@ input::-webkit-outer-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
-.barbell-selector:active{
-    background-color: rgb(156, 124, 18);
+.barbell-selector-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar-button-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+}
+
+.barbell-selector {
+    padding: 10px 19%;
+    font-size: 1.5em;
+}
+
+.active, .barbell-selector:hover {
+    background-color: rgb(123, 96, 10);
+    border-color: white;
+    border-radius: 5px;
+    color: white;
 }
