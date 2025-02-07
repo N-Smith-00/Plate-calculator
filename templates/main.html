@@ -3,7 +3,7 @@
     <head>
         <title>Plate Calculator</title>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
-        <script src="{{ url_for('static',filename='scripts/barButtons.js') }}"></script>
+        <script src="{{ url_for('static',filename='scripts/barButtons.js')}}"></script>
     </head>
 
     <body>
@@ -19,18 +19,29 @@
                     <label for="weight">Total Weight (bar+plates)</label>
                     <input type="number" id="weight" name="weight" min="0">
                 </div>
-
                 <div class="barbell-selector-wrapper">
                     <label for="barbell">Barbell Weight</label>
                     <div class="bar-button-wrapper" id="bar-buttons">
-                        <!--TODO: set button active when clicked-->
                         <button class="barbell-selector" data-barbell="55">55 lbs</button>
                         <button class="barbell-selector" data-barbell="45">45 lbs</button>
                         <button class="barbell-selector" data-barbell="25">25 lbs</button>
                         <button class="barbell-selector" data-barbell="15">15 lbs</button>
                     </div>
-                </div>    
+                </div>
+                <div class="plate-selector-wrapper">
+                    <label for="plates">Plate Weights</label>
+                    <div class="plate-button-wrapper">
+                        <button class="plate-selector" data-plate="55">55 lbs</button>
+                        <button class="plate-selector" data-plate="45">45 lbs</button>
+                        <button class="plate-selector" data-plate="35">35 lbs</button>
+                        <button class="plate-selector" data-plate="25">25 lbs</button>
+                    </div>
+                    <div class="plate-button-wrapper">
+                        <button class="plate-selector" data-plate="10">10 lbs</button>
+                        <button class="plate-selector" data-plate="5">5 lbs</button>
+                        <button class="plate-selector" data-plate="2.5">2.5 lbs</button>
             </div>
         </div>
+        <script src="{{ url_for('static',filename='scripts/barButtons.js') }}"></script>
     </body>
 </html>
