@@ -1,7 +1,7 @@
 function toggle(element) {
-    if (element.classList.contains('active')) {
-        element.classList.remove('active');
+    if (element.classList.contains('active-plate')) {
+        element.classList.remove('active-plate');
     } else {
-        element.classList.add('active');
+        element.classList.add('active-plate');
     }
 }
