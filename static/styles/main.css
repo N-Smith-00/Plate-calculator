@@ -59,12 +59,6 @@ input{
     width: 50%;
 }
 
-.input-wrapper label{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-}
-
 .weight-input{
     width: 100%;
     display: flex;
@@ -170,4 +164,10 @@ input[type=number] {
     color: red;
     font-size: 1.5em;
     font-weight: bold;
+}
+
+.input-label{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
 }

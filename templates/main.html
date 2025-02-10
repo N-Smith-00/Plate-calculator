@@ -18,11 +18,11 @@
         <div class="main-wrapper">
             <div class="input-wrapper">
                 <div class="weight-input">
-                    <label for="weight">Total Weight (bar+plates)</label>
+                    <label for="weight" class="input-label">Total Weight (bar+plates)</label>
                     <input type="number" id="weight" name="weight" min="0">
                 </div>
                 <div class="barbell-selector-wrapper">
-                    <label for="barbell">Barbell Weight</label>
+                    <p class="input-label">Barbell Weight</p>
                     <div class="bar-button-wrapper" id="bar-buttons">
                         <button class="barbell-selector" data-weight="55">55 lbs</button>
                         <button class="barbell-selector" data-weight="45">45 lbs</button>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="plate-selector-wrapper">
-                    <label for="plates">Plate Weights</label>
+                    <p class="input-label">Plate Weights</p>
                     <div class="plate-button-wrapper">
                         <button class="plate-selector" data-weight="55" onclick="toggle(this)">55 lbs</button>
                         <button class="plate-selector" data-weight="45" onclick="toggle(this)">45 lbs</button>
@@ -44,9 +44,15 @@
                         <button class="plate-selector" data-weight="2.5" onclick="toggle(this)">2.5 lbs</button>
                     </div>
                     <button class="submit-button" onclick="submit()">Calculate</button>
+                </div>
             </div>
             <div class="output-wrapper">
                 <p class="error-message" id="error-message"></p>
-        </div>
+                <div class="output-plate-wrapper">
+                    <p class="output-label">Plates</p>
+                    <div class="plate-list" id="plate-list"></div>
+                </div>
+            </div>
+        </div> 
     </body>
 </html>

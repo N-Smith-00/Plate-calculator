@@ -1,7 +1,7 @@
 function submit() {
     // clear error message
     const err = document.getElementById("error-message");
-    err.innerHTML = "";
+    clear_element(err);
 
     // get and validate total weight
     const weight = parseFloat(document.getElementById("weight").value);
@@ -19,6 +19,8 @@ function submit() {
             console.log("Error: No barbell selected");
             err.innerHTML = "Please select a barbell";
             return;
+        } else {
+            throw e;
         }
     }
 
@@ -40,6 +42,38 @@ function submit() {
         plates.push(parseFloat(active_plates[i].getAttribute("data-weight")));
     }
 
-    // TODO: calculate the plates needed
-    // TODO: show error message if the weight is not filled by plates
+    const plate_count = calculatePlates(weight, bar, plates);
+    console.log(plate_count);
+
+    if (plate_count.remaining != 0) {
+        console.log("Error: Weight is not filled by plates");
+        err.innerHTML = `${plate_count.remaining} lbs not filled by plates`;
+    }
+    
+    const plate_list = document.getElementById("plate-list");
+    clear_element(plate_list);
+    for (var i = 0; i < plates.length; i++) {
+        const plate = document.createElement("li");
+        plate.innerHTML = `${plates[i]} lbs: ${plate_count.plates[i]}`;
+        plate_list.appendChild(plate);
+    }
+
+    // TODO: visual plate display
+}
+
+function calculatePlates(weight, bar, plates) {
+    var one_side = (weight - bar)/2;
+    var plate_count = [];
+    for (var i = 0; i < plates.length; i++) {
+        plate_count.push(Math.floor(one_side/plates[i]));
+        one_side = one_side%plates[i];
+    }
+    return {
+        plates: plate_count,
+        remaining: one_side*2
+    };
+}
+
+function clear_element(element) {
+    element.innteHTML = "";
 }
