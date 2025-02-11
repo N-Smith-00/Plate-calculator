@@ -147,16 +147,47 @@ input[type=number] {
     font-size: 1.5em;
 }
 
-.active-plate {
-    background-color: rgb(211, 169, 28);
+.plate-selector:hover {
+    border-radius: 5px;
+        border-width: 5px;
+}
+
+/* active plate styles */
+.active-plate{
     border-color: white;
     border-radius: 5px;
 }
 
-.plate-selector:hover {
-    background-color: rgb(137, 109, 18);
-    border-color: white;
-    border-radius: 5px;
+#plate-55.active-plate{
+    background-color: rgb(21, 207, 194);
+}
+
+#plate-45.active-plate{
+    background-color: rgb(211, 28, 28);
+}
+
+#plate-35.active-plate{
+    background-color: rgb(24, 18, 204);
+}
+
+#plate-25.active-plate{
+    background-color: rgb(208, 163, 14);
+}
+
+#plate-15.active-plate{
+    background-color: rgb(224, 130, 16);
+}
+
+#plate-10.active-plate{
+    background-color: rgb(8, 132, 8);
+}
+
+#plate-5.active-plate{
+    background-color: rgb(104, 104, 104);
+}
+
+#plate-2-5.active-plate{
+    background-color: rgb(35, 35, 35);
     color: white;
 }
 
