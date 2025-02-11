@@ -75,5 +75,5 @@ function calculatePlates(weight, bar, plates) {
 }
 
 function clear_element(element) {
-    element.innteHTML = "";
+    element.innerHTML = "";
 }
