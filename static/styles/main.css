@@ -171,3 +171,32 @@ input[type=number] {
     font-weight: bold;
     color: white;
 }
+
+.output-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.display-wrapper {
+    position: relative;
+    width: 50%;
+}
+
+.bar-display {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+}
+
+.plate-display {
+    position: absolute;
+    right: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+

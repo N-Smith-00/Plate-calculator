@@ -49,8 +49,11 @@
             <div class="output-wrapper">
                 <p class="error-message" id="error-message"></p>
                 <div class="output-plate-wrapper">
-                    <p class="output-label">Plates</p>
                     <div class="plate-list" id="plate-list"></div>
+                    <div class="display-wrapper">
+                        <img src="{{ url_for('static',filename='images/bar.webp') }}" class="bar-image">
+                        <div class="plate-display-wrapper"></div>
+                    </div>
                 </div>
             </div>
         </div> 
