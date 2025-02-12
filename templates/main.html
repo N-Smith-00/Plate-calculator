@@ -5,7 +5,7 @@
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
         <script src="{{ url_for('static',filename='scripts/barButtons.js') }}" defer></script>
         <script src="{{ url_for('static',filename='scripts/plateButtons.js')}}" async></script>
-        <script src="{{ url_for('static',filename='scripts/submit.js')}}" async></script>
+        <script src="{{ url_for('static',filename='scripts/submit.js')}}" defer></script>
     </head>
 
     <body>
@@ -16,6 +16,16 @@
             </div>
         </div>
         <div class="main-wrapper">
+            <div class="output-wrapper">
+                <p class="error-message" id="error-message"></p>
+                <div class="output-plate-wrapper">
+                    <div class="display-wrapper">
+                        <img src="{{ url_for('static',filename='images/bar.webp') }}" class="bar-image">
+                        <div class="plate-display-wrapper" id="plate-display"></div>
+                        <div class="plate-text-wrapper" id="plate-text"></div>
+                    </div>
+                </div>
+            </div>
             <div class="input-wrapper">
                 <div class="weight-input">
                     <label for="weight" class="input-label">Total Weight (bar+plates)</label>
@@ -47,16 +57,7 @@
                     <button class="submit-button" onclick="submit()">Calculate</button>
                 </div>
             </div>
-            <div class="output-wrapper">
-                <p class="error-message" id="error-message"></p>
-                <div class="output-plate-wrapper">
-                    <div class="plate-list" id="plate-list"></div>
-                    <div class="display-wrapper">
-                        <img src="{{ url_for('static',filename='images/bar.webp') }}" class="bar-image">
-                        <div class="plate-display-wrapper"></div>
-                    </div>
-                </div>
-            </div>
+            
         </div> 
     </body>
 </html>

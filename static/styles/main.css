@@ -164,10 +164,12 @@ input[type=number] {
 
 #plate-45.active-plate{
     background-color: rgb(211, 28, 28);
+    color: white;
 }
 
 #plate-35.active-plate{
     background-color: rgb(24, 18, 204);
+    color: white;
 }
 
 #plate-25.active-plate{
@@ -180,10 +182,12 @@ input[type=number] {
 
 #plate-10.active-plate{
     background-color: rgb(8, 132, 8);
+    color: white;
 }
 
 #plate-5.active-plate{
     background-color: rgb(104, 104, 104);
+    color: white;
 }
 
 #plate-2-5.active-plate{
@@ -223,11 +227,64 @@ input[type=number] {
     justify-content: center;
 }
 
-.plate-display {
+.plate-display-wrapper {
     position: absolute;
-    right: 50%;
+    top:0%;
+    right:0%;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: end;
+}
+
+.plate-text-wrapper {
+    position: absolute;
+    height: 226px;
+    top: 0%;
+    right: 0%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+}
+
+#plate-55-text{
+    width: 65px;
+    text-align: center;
+}
+
+#plate-45-text{
+    width: 60px;
+    text-align: center;
+}
+
+#plate-35-text{
+    width: 55px;
+    text-align: center;
+}
+
+#plate-25-text{
+    width: 50px;
+    text-align: center;
+}
+
+#plate-15-text{
+    width: 45px;
+    text-align: center;
+}
+
+#plate-10-text{
+    width: 40px;
+    text-align: center;
+}
+
+#plate-5-text{
+    width: 35px;
+    text-align: center;
+}
+
+#plate-2-5-text{
+    width: 30px;
+    text-align: center;
 }
 
 

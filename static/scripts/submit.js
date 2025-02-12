@@ -49,16 +49,8 @@ function submit() {
         console.log("Error: Weight is not filled by plates");
         err.innerHTML = `${plate_count.remaining} lbs not filled by plates`;
     }
-    
-    const plate_list = document.getElementById("plate-list");
-    clear_element(plate_list);
-    for (var i = 0; i < plates.length; i++) {
-        const plate = document.createElement("li");
-        plate.innerHTML = `${plates[i]} lbs: ${plate_count.plates[i]}`;
-        plate_list.appendChild(plate);
-    }
 
-    // TODO: visual plate display
+    showPlates(plates, plate_count.plates);
 }
 
 function calculatePlates(weight, bar, plates) {
@@ -76,4 +68,37 @@ function calculatePlates(weight, bar, plates) {
 
 function clear_element(element) {
     element.innerHTML = "";
+}
+
+function showPlates(plates, plate_count) {
+    const wrapper = document.getElementById("plate-display");
+    const text_wrapper = document.getElementById("plate-text");
+    clear_element(wrapper);
+    clear_element(text_wrapper);
+    for (var i = 0; i < plates.length; i++) {
+        for (var j = 0; j < plate_count[i]; j++) {
+            // create plate image
+            const plate = document.createElement("img");
+            plate.classList.add("plate-image");
+            if (plates[i] == 2.5) {
+                plate.id = `plate-2-5-display`
+                plate.src = "/static/images/2-5.webp";
+            } else {
+                plate.id = `plate-${plates[i]}-display`;
+                plate.src = `/static/images/${plates[i]}.webp`;
+            }
+            wrapper.appendChild(plate);
+
+            // create text
+            const text = document.createElement("p");
+            text.innerHTML = plates[i];
+            text.classList.add("plate-text");
+            if (plates[i] == 2.5) {
+                text.id = `plate-2-5-text`;
+            } else {
+                text.id = `plate-${plates[i]}-text`;
+            }
+            text_wrapper.appendChild(text);
+        }
+    }
 }
